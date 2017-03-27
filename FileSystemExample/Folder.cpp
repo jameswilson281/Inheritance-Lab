@@ -36,3 +36,15 @@ void Folder::AddFile(File* newFile)
 {
 	_files.push_back(newFile);
 }
+
+Folder* Folder::FindSubFolder(std::string subFolderName) 
+{
+	for (auto subFolder : _folders) 
+	{
+		if (subFolder->getName() == subFolderName)
+		{
+			return subFolder;
+		}
+	}
+	return nullptr;
+}

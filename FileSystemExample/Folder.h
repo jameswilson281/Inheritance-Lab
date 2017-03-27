@@ -16,5 +16,7 @@ public:
 	std::string List();
 	void AddFile(File* newFile);
 	void AddFolder(Folder* newFolder);
+	Folder* FindSubFolder(std::string subFolderName);
+	std::vector<Folder*> getFolders() { return _folders; }
 };
 
