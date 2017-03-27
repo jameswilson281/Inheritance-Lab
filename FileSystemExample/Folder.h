@@ -6,12 +6,15 @@ class Folder
 {
 private:
 	std::string _name;
-	std::vector<Folder> _folders;
-	std::vector<File> _files;
+	std::vector<Folder*> _folders;
+	std::vector<File*> _files;
 public:
 	Folder(std::string name);
 	~Folder();
 
 	std::string getName() { return _name; }
+	std::string List();
+	void AddFile(File* newFile);
+	void AddFolder(Folder* newFolder);
 };
 
